@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Poppins:wght@500;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* Fonts */
+  --font-family: "Poppins", sans-serif;
+
+  /* Font sizes */
+  --fs-xs: 0.5rem;
+  --fs-sm: 0.9375rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-lgr: 1.75rem;
+
+  /* Spacing */
+  --spacing-smallest: 0.5rem;
+  --spacing-xs: 0.75rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-lgr: 2.5rem;
+  --spacing-xl: 5rem;
+
+  /* Colors */
+  --clr-white: #fff;
+  --clr-accent: #2bd0d0;
+  --clr-primary: #34313d;
+  --clr-primary-light: #3a3054;
+}
+
+/* Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  font-size: var(--fs-regular);
+  overflow-x: hidden;
+  background: #eff1f7;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+  color: var(--clr-primary);
+}
+
+h1,
+h2 {
+  line-height: 3rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* General */
+.container {
+  padding: 0 1.5rem;
+  margin-inline: auto;
+}
+
+/* Header */
+header {
+  background-color: var(--clr-white);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-lgr) 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--spacing-lgr);
+}
+
+.hero img {
+  height: 100%;
+  min-height: 19rem;
+  width: 130%;
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-cta h1 {
+  text-align: center;
+  font-size: 2.625rem;
+}
+
+.hero-cta p {
+  margin-bottom: var(--spacing-lg);
+  color: #9e9aa8;
+  font-size: var(--fs-md);
+  line-height: 1.875rem;
+  margin-top: var(--spacing-xs);
+}
+
+.hero-cta .btn {
+  border: none;
+  border-radius: 1.75rem;
+  background-color: #2bd0d0;
+  color: var(--clr-white);
+  font-size: 1.25rem;
+  margin-inline: auto;
+  padding: var(--spacing-xs) var(--spacing-lgr);
+  cursor: pointer;
+  margin-bottom: 10rem;
+}
+
+/* Link submission */
+.link-submission {
+  background-image: url("public/images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  background-color: var(--clr-primary-light);
+  border-radius: 0.625rem;
+  padding: var(--spacing-md);
+  margin-top: -5rem;
+}
+
+.link-submission input {
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
+  padding: 0.625rem 0;
+  padding-left: var(--spacing-sm);
+  border-radius: 0.3125rem;
+  border: none;
+}
+
+.link-submission button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 0.3125rem;
+  border: none;
+  padding: 0.625rem;
+  background-color: #2bd0d0;
+  color: var(--clr-white);
+  font-size: var(--fs-md);
+}
+
+/* Link Submissions */
+.submission {
+  border-radius: 0.3125rem;
+  background: #fff;
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+.original-url {
+  color: var(--clr-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.submission hr {
+  height: 0.0625rem;
+  border: none;
+  margin: var(--spacing-smallest) calc(var(--spacing-md) * -1);
+  opacity: 0.25;
+  background: #9e9aa8;
+}
+
+.shortened-url {
+  color: #2bd0d0;
+}
+
+.copy-btn {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 0.3125rem;
+  border: none;
+  padding: var(--spacing-smallest);
+  background-color: #2bd0d0;
+  color: var(--clr-white);
+  margin-top: var(--spacing-smallest);
+}
+
+.copy-btn.copied {
+  background-color: var(--clr-primary-light);
+}
+
+/* Media queries */
+@media (min-width: 900px) {
+  header.container {
+    padding-bottom: 10rem;
+  }
+
+  .link-submission {
+    margin-top: -2.5rem;
+  }
+
+  .hero {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .hero-cta {
+    min-width: 50%;
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .hero-cta .btn {
+    margin-bottom: 0;
+  }
+
+  .link-submission form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .link-submission input {
+    flex-grow: 1;
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  .link-submission button {
+    width: auto;
+  }
+
+  .submission {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm);
+  }
+
+  .submission hr {
+    display: none;
+    height: 0;
+  }
+
+  .copy-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    white-space: nowrap;
+  }
+
+  .copy-btn {
+    padding: var(--spacing-smallest) 1.5rem;
+    box-sizing: content-box;
+    min-width: 4rem;
+  }
+}

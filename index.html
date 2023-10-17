@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d1dfda510c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor Challenge</title>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <img src="public/images/logo.svg" alt="Shortly Logo" />
+        <!-- <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-x"></i> -->
+        <svg
+          width="24"
+          height="21"
+          viewBox="0 0 24 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="24" height="3" fill="#9E9AA8" />
+          <rect y="9" width="24" height="3" fill="#9E9AA8" />
+          <rect y="18" width="24" height="3" fill="#9E9AA8" />
+        </svg>
+      </nav>
+
+      <div class="hero">
+        <div class="hero-cta">
+          <h1>More than just shorter links</h1>
+          <p>
+            Build your brand's recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <button class="btn">Get Started</button>
+        </div>
+        <div>
+          <img src="public/images/illustration-working.svg" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="link-submission">
+        <form id="link-form">
+          <input type="text" placeholder="Shorten a link here..." name="link" />
+          <button id="link-btn">Shorten It!</button>
+        </form>
+      </section>
+
+      <section class="link-submissions" id="link-submissions"></section>
+    </main>
+
+    <footer></footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
