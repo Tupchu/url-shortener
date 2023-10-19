@@ -347,26 +347,34 @@ nav a:hover {
     padding: 0 5.5rem;
   }
 
+  /* Header */
   header.container {
     padding-bottom: 10rem;
-  }
-
-  .link-submission {
-    margin-top: -2.5rem;
   }
 
   .hero {
     flex-direction: row;
   }
 
+  .hero p {
+    max-width: 40ch;
+  }
+
+  .hero img {
+    width: initial;
+  }
+
   .hero-cta {
-    min-width: 50%;
+    min-width: 60%;
     margin-top: 0;
     justify-content: center;
   }
 
   .hero-cta h1 {
     text-align: left;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    letter-spacing: -0.125rem;
   }
 
   .hero-cta .btn {
@@ -375,8 +383,9 @@ nav a:hover {
     align-self: flex-start;
   }
 
-  .menu-icon {
-    display: none;
+  /* Link Submission */
+  .link-submission {
+    margin-top: -2.5rem;
   }
 
   .link-submission form {
@@ -396,6 +405,7 @@ nav a:hover {
     width: auto;
   }
 
+  /* Submissions */
   .submission {
     display: flex;
     justify-content: space-between;
@@ -473,10 +483,50 @@ nav a:hover {
     color: var(--clr-white);
     min-width: initial;
   }
+
+  .menu-icon {
+    display: none;
+  }
 }
 
 @media (min-width: 1300px) {
   .container {
     padding: 0 10.5rem;
+  }
+
+  .hero-cta h1 {
+    font-size: 5rem;
+    line-height: 5.625rem;
+    letter-spacing: -0.125rem;
+  }
+
+  .hero-cta p {
+    font-size: var(--fs-lg);
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero {
+    gap: 0;
+  }
+
+  .hero-cta {
+    min-width: 50%;
+  }
+
+  .hero-cta h1 {
+    font-size: 5.5rem;
+    line-height: 6.5rem;
+  }
+
+  .hero img {
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero-cta p {
+    max-width: 45ch;
   }
 }
