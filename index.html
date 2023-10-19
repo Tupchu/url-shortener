@@ -14,20 +14,32 @@
   <body>
     <header class="container">
       <nav>
-        <img src="public/images/logo.svg" alt="Shortly Logo" />
-        <!-- <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-x"></i> -->
-        <svg
-          width="24"
-          height="21"
-          viewBox="0 0 24 21"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="24" height="3" fill="#9E9AA8" />
-          <rect y="9" width="24" height="3" fill="#9E9AA8" />
-          <rect y="18" width="24" height="3" fill="#9E9AA8" />
-        </svg>
+        <a href="#" class="logo"
+          ><img src="public/images/logo.svg" alt="Shortly Logo"
+        /></a>
+        <!-- <i class="fa-solid fa-bars"></i> -->
+        <!-- <i class="fa-solid fa-x"></i> -->
+
+        <div class="nav-items">
+          <ul class="nav-links">
+            <li><a href="">Features</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Resources</a></li>
+          </ul>
+
+          <hr />
+
+          <div class="nav-btns">
+            <a href="#">Login</a>
+            <button class="btn">Signup</button>
+          </div>
+        </div>
+
+        <div class="menu-icon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
 
       <div class="hero">
@@ -49,7 +61,7 @@
       <section class="link-submission">
         <form id="link-form">
           <input type="text" placeholder="Shorten a link here..." name="link" />
-          <button id="link-btn">Shorten It!</button>
+          <button class="btn" id="link-btn">Shorten It!</button>
         </form>
       </section>
 

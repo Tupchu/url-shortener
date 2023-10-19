@@ -2,6 +2,14 @@ import axios from "axios";
 
 const linkForm = document.querySelector("#link-form");
 const linkSubmissions = document.querySelector("#link-submissions");
+const navItems = document.querySelector(".nav-items");
+const menuIcon = document.querySelector(".menu-icon");
+
+// handle mobile navigation
+menuIcon.addEventListener("click", () => {
+  navItems.classList.toggle("active");
+  menuIcon.classList.toggle("active");
+});
 
 // shorten url form event
 linkForm.addEventListener("submit", (event) => {
@@ -23,7 +31,7 @@ function getShortLink(url) {
     .then((res) =>
       res.data.shorturl
         ? handleLinkSuccess(url, res.data.shorturl)
-        : handleLinkError(res.data.errorcode)
+        : handleInvalidLink(res.data.errorcode)
     )
     .catch((err) => console.log(err));
 }
@@ -49,7 +57,7 @@ function handleLinkSuccess(url, shorturl) {
   );
 }
 
-function handleLinkError(errorCode) {
+function handleInvalidLink(errorCode) {
   if (errorCode === 1) {
     // invalid url
   }
@@ -76,7 +84,7 @@ function addLinkSubmission(url, shorturl) {
     <hr />
     <div class="copy-container">
       <p class="shortened-url">${shorturl}</p>
-      <button class="copy-btn">Copy</button>
+      <button class="btn copy-btn">Copy</button>
     </div>
   </div>
 `;
