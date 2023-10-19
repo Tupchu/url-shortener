@@ -494,6 +494,7 @@ nav a:hover {
     padding: 0 10.5rem;
   }
 
+  /* Header */
   .hero-cta h1 {
     font-size: 5rem;
     line-height: 5.625rem;
@@ -502,6 +503,21 @@ nav a:hover {
 
   .hero-cta p {
     font-size: var(--fs-lg);
+  }
+
+  /* Submission */
+  .link-submission {
+    padding: 3.25rem 4rem;
+    margin-top: -5rem;
+  }
+
+  .link-submission input {
+    padding: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .link-submission button {
+    padding: 1rem 2.5rem;
   }
 }
 
