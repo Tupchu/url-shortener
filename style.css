@@ -271,11 +271,21 @@ nav a:hover {
 
 .link-submission input {
   width: 100%;
-  margin-bottom: var(--spacing-sm);
   padding: 0.625rem 0;
   padding-left: var(--spacing-sm);
   border-radius: 0.3125rem;
   border: none;
+}
+
+.link-submission input.invalid-url {
+  border: 3px solid #f46363;
+  color: #f46363;
+}
+
+.url-error {
+  color: #f46363;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .link-submission button {
@@ -395,6 +405,10 @@ nav a:hover {
     gap: var(--spacing-md);
   }
 
+  #link-form {
+    position: relative;
+  }
+
   .link-submission input {
     flex-grow: 1;
     margin-bottom: 0;
@@ -403,6 +417,16 @@ nav a:hover {
 
   .link-submission button {
     width: auto;
+  }
+
+  .url-error {
+    margin: 0;
+    position: absolute;
+    top: 3.15rem;
+    left: 0;
+    font-size: 0.795rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.00681rem;
   }
 
   /* Submissions */
@@ -518,6 +542,13 @@ nav a:hover {
 
   .link-submission button {
     padding: 1rem 2.5rem;
+  }
+
+  .url-error {
+    margin: 0;
+    top: 4.5rem;
+    left: 0;
+    font-size: 1rem;
   }
 }
 

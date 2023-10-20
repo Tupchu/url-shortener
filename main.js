@@ -4,6 +4,8 @@ const linkForm = document.querySelector("#link-form");
 const linkSubmissions = document.querySelector("#link-submissions");
 const navItems = document.querySelector(".nav-items");
 const menuIcon = document.querySelector(".menu-icon");
+const urlInput = document.querySelector(".url-input");
+const urlError = document.querySelector(".url-error");
 
 // handle mobile navigation
 menuIcon.addEventListener("click", () => {
@@ -18,6 +20,8 @@ linkForm.addEventListener("submit", (event) => {
   const url = formData.get("link");
 
   if (url === "") {
+    urlInput.classList.add("invalid-url");
+    urlError.innerHTML = "Please add a URL";
     return;
   }
 
@@ -55,11 +59,16 @@ function handleLinkSuccess(url, shorturl) {
     "afterbegin",
     addLinkSubmission(url, shorturl)
   );
+
+  urlInput.classList.remove("invalid-url");
+  urlError.innerHTML = "";
 }
 
 function handleInvalidLink(errorCode) {
   if (errorCode === 1) {
     // invalid url
+    urlInput.classList.add("invalid-url");
+    urlError.innerHTML = "Please enter a valid URL";
   }
 }
 
