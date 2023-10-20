@@ -37,7 +37,10 @@ function getShortLink(url) {
         ? handleLinkSuccess(url, res.data.shorturl)
         : handleInvalidLink(res.data.errorcode)
     )
-    .catch((err) => console.log(err));
+    .catch(() => {
+      urlInput.classList.add("invalid-url");
+      urlError.innerHTML = "Something went wrong. Please try again later.";
+    });
 }
 
 function handleLinkSuccess(url, shorturl) {
@@ -65,10 +68,12 @@ function handleLinkSuccess(url, shorturl) {
 }
 
 function handleInvalidLink(errorCode) {
+  urlInput.classList.add("invalid-url");
   if (errorCode === 1) {
     // invalid url
-    urlInput.classList.add("invalid-url");
     urlError.innerHTML = "Please enter a valid URL";
+  } else {
+    urlError.innerHTML = "Something went wrong. Please try again later.";
   }
 }
 

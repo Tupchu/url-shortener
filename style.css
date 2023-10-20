@@ -231,7 +231,7 @@ nav a:hover {
   background-color: var(--clr-accent);
   border: none;
   border-radius: 1.75rem;
-  padding: 0.75rem var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-md);
   color: inherit;
   min-width: 100%;
   max-width: 30rem;
@@ -291,7 +291,7 @@ nav a:hover {
 .url-error {
   color: #f46363;
   margin-top: 0.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .link-submission button {
@@ -299,7 +299,7 @@ nav a:hover {
   width: 100%;
   border-radius: 0.3125rem;
   border: none;
-  padding: 0.625rem 2.5rem;
+  padding: 0.625rem var(--spacing-lgr);
   background-color: #2bd0d0;
   color: var(--clr-white);
   font-size: var(--fs-md);
@@ -372,6 +372,61 @@ button.delete-btn:hover {
 
 .active {
   display: flex;
+}
+
+/* Stat Section */
+.stats {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.stats h2 {
+  font-size: 1.75rem;
+}
+
+.stat-description {
+  font-size: var(--fs-base);
+}
+
+.stat-card {
+  margin-top: 5.75rem;
+  background-color: var(--clr-white);
+  padding: 2rem;
+  border-radius: 0.3125rem;
+  position: relative;
+}
+
+.stat-cards {
+  position: relative;
+}
+
+.vertical-line {
+  height: 100%;
+  width: 0.5rem;
+  background-color: var(--clr-accent);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.stat-icon {
+  background-color: var(--clr-primary-light);
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.stat-card h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
 }
 
 /* Media queries */
@@ -472,11 +527,11 @@ button.delete-btn:hover {
   }
 
   .shortened-url {
-    margin-right: 1.5rem;
+    margin-right: var(--spacing-md);
   }
 
   .copy-btn {
-    margin-right: 0.75rem;
+    margin-right: var(--spacing-xs);
   }
 
   .copy-btn,
@@ -567,19 +622,55 @@ button.delete-btn:hover {
   }
 
   .link-submission input {
-    padding: 1rem 0;
-    padding-left: 1rem;
+    padding: var(--spacing-sm) 0;
+    padding-left: var(--spacing-sm);
   }
 
   .link-submission button {
-    padding: 1rem 2.5rem;
+    padding: var(--spacing-sm) var(--spacing-lgr);
   }
 
   .url-error {
     margin: 0;
     top: 4.5rem;
     left: 0;
-    font-size: 1rem;
+    font-size: var(--fs-base);
+  }
+
+  /* Stats */
+  .stats h2 {
+    font-size: 2.5rem;
+  }
+
+  .stat-description {
+    font-size: var(--fs-md);
+  }
+
+  .stat-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-lg);
+    text-align: left;
+  }
+
+  .stat-card:nth-of-type(2) {
+    top: 2.75rem;
+  }
+
+  .stat-card:nth-of-type(3) {
+    top: 5.5rem;
+  }
+
+  .stat-icon {
+    left: var(--spacing-lg);
+    transform: translate(0%);
+  }
+
+  .vertical-line {
+    height: 0.5rem;
+    width: 90%;
+    top: 15rem;
+    right: 0;
   }
 }
 
