@@ -106,6 +106,12 @@ select {
   margin-inline: auto;
 }
 
+.btn {
+  background-color: var(--clr-accent);
+  color: var(--clr-white);
+  border: none;
+}
+
 button.btn:hover {
   background-color: var(--clr-accent-light);
 }
@@ -343,6 +349,23 @@ nav a:hover {
   background-color: var(--clr-primary-light);
 }
 
+.delete-btn {
+  cursor: pointer;
+  background-color: var(--clr-white);
+  border: solid 1px var(--clr-accent);
+  color: var(--clr-accent);
+  width: 100%;
+  padding: var(--spacing-smallest);
+  border-radius: 0.3125rem;
+  margin-top: var(--spacing-smallest);
+}
+
+button.delete-btn:hover {
+  background-color: #f46363;
+  border-color: #f46363;
+  color: var(--clr-white);
+}
+
 .hidden {
   display: none;
 }
@@ -445,11 +468,19 @@ nav a:hover {
   .copy-container {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
     white-space: nowrap;
   }
 
+  .shortened-url {
+    margin-right: 1.5rem;
+  }
+
   .copy-btn {
+    margin-right: 0.75rem;
+  }
+
+  .copy-btn,
+  .delete-btn {
     margin-top: 0;
     padding: var(--spacing-smallest) var(--spacing-md);
     box-sizing: content-box;

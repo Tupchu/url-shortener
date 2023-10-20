@@ -94,6 +94,7 @@ function addLinkSubmission(url, shorturl) {
     <div class="copy-container">
       <p class="shortened-url">${shorturl}</p>
       <button class="btn copy-btn">Copy</button>
+      <button class="btn delete-btn">Delete</button>
     </div>
   </div>
 `;
@@ -108,6 +109,21 @@ linkSubmissions.addEventListener("click", (e) => {
     // update UI to show copied status
     e.target.classList.add("copied");
     e.target.innerHTML = "Copied!";
+  }
+
+  if (e.target.matches(".delete-btn")) {
+    const submissions = JSON.parse(localStorage.getItem("linkSubmissions"));
+    const url =
+      e.target.previousElementSibling.previousElementSibling.innerHTML;
+
+    localStorage.setItem(
+      "linkSubmissions",
+      JSON.stringify(
+        submissions.filter((submission) => submission.shorturl !== url)
+      )
+    );
+
+    e.target.parentElement.parentElement.remove();
   }
 });
 
