@@ -53,23 +53,28 @@
       </div>
     </header>
 
-    <main class="container">
-      <section class="link-submission">
-        <form id="link-form">
-          <input
-            type="text"
-            placeholder="Shorten a link here..."
-            name="link"
-            class="url-input"
-          />
-          <p class="url-error"></p>
-          <button class="btn" id="link-btn">Shorten It!</button>
-        </form>
+    <main>
+      <section class="container">
+        <div class="link-submission">
+          <form id="link-form">
+            <input
+              type="text"
+              placeholder="Shorten a link here..."
+              name="link"
+              class="url-input"
+            />
+            <p class="url-error"></p>
+            <button class="btn" id="link-btn">Shorten It!</button>
+          </form>
+        </div>
       </section>
 
-      <section class="link-submissions" id="link-submissions"></section>
+      <section
+        class="link-submissions container"
+        id="link-submissions"
+      ></section>
 
-      <section class="stats">
+      <section class="stats container">
         <h2>Advanced Statistics</h2>
         <p class="stat-description">
           Track how your links are performing across the web with our advanced
@@ -122,6 +127,11 @@
             </p>
           </div>
         </div>
+      </section>
+
+      <section class="cta">
+        <h2>Boost your links today</h2>
+        <button class="btn">Get Started</button>
       </section>
     </main>
 
