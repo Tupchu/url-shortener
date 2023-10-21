@@ -137,6 +137,6 @@ function removeFromClipboard() {
   const copyUrlBtn = document.querySelectorAll(".copy-btn");
   copyUrlBtn.forEach((btn) => {
     btn.classList.remove("copied");
-    btn.innerHTML = "Copy!";
+    btn.innerHTML = "Copy";
   });
 }
