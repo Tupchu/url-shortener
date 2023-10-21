@@ -119,6 +119,7 @@ button.btn:hover {
 /* Header */
 header {
   background-color: var(--clr-white);
+  overflow-x: hidden;
 }
 
 .hero {
